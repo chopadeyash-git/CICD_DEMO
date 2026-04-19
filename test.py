@@ -1,7 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 import pytest
 from app import app
 
@@ -14,4 +10,4 @@ def client():
 def test_home(client):
     response = client.get('/')
     assert response.status_code == 200
-    assert b"Hello World!" in response.data
+    assert b"Welcome to world of cicd!" in response.data
